@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #loading{
+        height: 600px;
+        width: 600px;
+        /* border: 1px solid; */
+        background-color: rgb(141, 240, 207);
+        font-size: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:auto;
+        box-shadow: 0 15px 30px rgba(8, 8, 8, 0.829);
+        border-radius: 20px;
+    }
+
+</style>
+<body style="background-color:rgb(236, 157, 143)">
+    <div id="loading" onclick="fun()"><i style="color:rgb(155, 29, 50);text-shadow: 2px 2px 2px rgb(83, 44, 44);">click me💌</i></div>
+    <script>
+        function fun(){
+        countdown=10
+        timer=setInterval(()=>{
+            document.getElementById("loading").innerText=countdown
+            countdown--
+            if(countdown<-1){
+                clearInterval(timer)
+                loading.innerText=" "
+                loading.style.background="url(./hny2.gif)"
+                loading.style.backgroundSize="cover"
+                loading.style.backgroundPosition="center";
+
+            }
+        },1000)
+        }
+    </script>
+</body>
+</html>
